@@ -38,5 +38,21 @@
   "Group": {
     "dataSource": "db",
     "public": true
+  },
+  "Message": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Chatter": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Event": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Calendar": {
+    "dataSource": "db",
+    "public": true
   }
 }

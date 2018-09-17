@@ -1,18 +1,15 @@
 {
-  "name": "Group",
-  "plural": "Groups",
+  "name": "Message",
+  "plural": "Messages",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "text": {
       "type": "string",
       "required": true
-    },
-    "description": {
-      "type": "string"
     },
     "creationDate": {
       "type": "date"
@@ -20,20 +17,14 @@
   },
   "validations": [],
   "relations": {
-    "messages": {
-      "type": "hasMany",
-      "model": "Message",
-      "foreignKey": ""
-    },
-    "members": {
-      "type": "hasMany",
-      "model": "Chatter",
-      "foreignKey": ""
-    },
     "creator": {
       "type": "belongsTo",
       "model": "Chatter",
       "foreignKey": "creatorId"
+    },
+    "group": {
+      "type": "belongsTo",
+      "model": "Group"
     }
   },
   "acls": [

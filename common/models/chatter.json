@@ -1,0 +1,29 @@
+{
+  "name": "Chatter",
+  "plural": "Chatters",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "messages": {
+      "type": "hasMany",
+      "model": "Message",
+      "foreignKey": "creatorId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

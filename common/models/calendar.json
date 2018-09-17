@@ -1,6 +1,6 @@
 {
-  "name": "Group",
-  "plural": "Groups",
+  "name": "Calendar",
+  "plural": "Calendars",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -28,6 +28,11 @@
     "members": {
       "type": "hasMany",
       "model": "Chatter",
+      "foreignKey": ""
+    },
+    "events": {
+      "type": "hasMany",
+      "model": "Event",
       "foreignKey": ""
     },
     "creator": {

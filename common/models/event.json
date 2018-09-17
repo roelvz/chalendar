@@ -1,12 +1,16 @@
 {
-  "name": "Group",
-  "plural": "Groups",
+  "name": "Event",
+  "plural": "Events",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
     "name": {
       "type": "string",
       "required": true
@@ -23,11 +27,6 @@
     "messages": {
       "type": "hasMany",
       "model": "Message",
-      "foreignKey": ""
-    },
-    "members": {
-      "type": "hasMany",
-      "model": "Chatter",
       "foreignKey": ""
     },
     "creator": {
