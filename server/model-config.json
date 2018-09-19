@@ -35,14 +35,6 @@
     "dataSource": "db",
     "public": false
   },
-  "Group": {
-    "dataSource": "db",
-    "public": true
-  },
-  "Message": {
-    "dataSource": "db",
-    "public": true
-  },
   "Chatter": {
     "dataSource": "db",
     "public": true
@@ -52,6 +44,14 @@
     "public": true
   },
   "Calendar": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Group": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Message": {
     "dataSource": "db",
     "public": true
   }
