@@ -1,6 +1,5 @@
 {
   "restApiRoot": "/api",
-  "host": "localhost",
   "remoting": {
     "context": false,
     "rest": {
