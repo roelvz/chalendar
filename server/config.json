@@ -1,6 +1,6 @@
 {
   "restApiRoot": "/api",
-  "host": "challendar.herokuapp.com",
+  "host": "localhost",
   "remoting": {
     "context": false,
     "rest": {
