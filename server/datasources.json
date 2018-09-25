@@ -8,15 +8,5 @@
     "name": "db",
     "user": "heroku_c1j5phlm",
     "connector": "mongodb"
-  },
-  "db_local": {
-    "host": "ds215093.mlab.com",
-    "port": 15093,
-    "url": "",
-    "database": "heroku_c1j5phlm",
-    "password": "nhfe3cgoab8au8m65acnsuh9r6",
-    "name": "db",
-    "user": "heroku_c1j5phlm",
-    "connector": "mongodb"
   }
 }
