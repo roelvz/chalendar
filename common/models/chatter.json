@@ -1,17 +1,29 @@
 {
   "name": "Chatter",
   "plural": "Chatters",
-  "base": "User",
-  "idInjection": true,
+  "base": "PersistedModel",
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
     "firstName": {
       "type": "string",
       "required": true
     },
     "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "picture": {
       "type": "string",
       "required": true
     }

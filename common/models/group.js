@@ -13,7 +13,7 @@ module.exports = function(Group) {
     // TODO: check in correct way
     if (context.methodString === 'Group.prototype.__create__messages') {
       context.args.data.creationDate = Date.now();
-      console.log(user);
+      console.log(context.req.user);
     }
     next();
   });
