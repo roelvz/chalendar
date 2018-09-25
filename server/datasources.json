@@ -1,6 +1,6 @@
 {
   "db": {
-    "host": "ds215093.mlab.com",
+    "host": "localhost",
     "port": 15093,
     "url": "",
     "database": "heroku_c1j5phlm",
