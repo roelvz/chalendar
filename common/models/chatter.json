@@ -21,7 +21,7 @@
     },
     "email": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "picture": {
       "type": "string",
