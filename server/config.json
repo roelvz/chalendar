@@ -1,5 +1,6 @@
 {
   "restApiRoot": "/api",
+  "loginRequired": "true",
   "remoting": {
     "context": false,
     "rest": {

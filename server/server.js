@@ -21,7 +21,9 @@ var authCheck = jwt({
   algorithms: ['RS256'],
 });
 
-app.use(authCheck);
+if (app.settings.env !== 'development') {
+  app.use(authCheck);
+}
 
 // apply to a path
 // app.use('/api/Groups', function(req, res, next) {
