@@ -22,7 +22,7 @@ var authCheck = jwt({
 });
 
 if (app.settings.env !== 'development') {
-  app.use(authCheck);
+  // app.use(authCheck);
 }
 
 // apply to a path
