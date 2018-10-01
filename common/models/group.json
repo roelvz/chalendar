@@ -20,14 +20,17 @@
   },
   "validations": [],
   "relations": {
-    "members": {
-      "type": "hasMany",
-      "model": "Chatter",
-      "foreignKey": ""
-    },
     "chat": {
       "type": "hasOne",
       "model": "Chat"
+    },
+    "members": {
+      "type": "hasAndBelongsToMany",
+      "model": "Chatter",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": false
+      }
     }
   },
   "acls": [],

@@ -34,6 +34,22 @@
       "type": "hasMany",
       "model": "Message",
       "foreignKey": "creatorId"
+    },
+    "groups": {
+      "type": "hasAndBelongsToMany",
+      "model": "Group",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": false
+      }
+    },
+    "calendars": {
+      "type": "hasAndBelongsToMany",
+      "model": "Calendar",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": false
+      }
     }
   },
   "acls": [],

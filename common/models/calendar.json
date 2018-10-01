@@ -20,11 +20,6 @@
   },
   "validations": [],
   "relations": {
-    "members": {
-      "type": "hasMany",
-      "model": "Chatter",
-      "foreignKey": ""
-    },
     "events": {
       "type": "hasMany",
       "model": "Event",
@@ -34,6 +29,14 @@
       "type": "belongsTo",
       "model": "Chatter",
       "foreignKey": "creatorId"
+    },
+    "members": {
+      "type": "hasAndBelongsToMany",
+      "model": "Chatter",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": false
+      }
     }
   },
   "acls": [],
