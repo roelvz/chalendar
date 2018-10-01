@@ -20,20 +20,14 @@
   },
   "validations": [],
   "relations": {
-    "messages": {
-      "type": "hasMany",
-      "model": "Message",
-      "foreignKey": ""
-    },
     "members": {
       "type": "hasMany",
       "model": "Chatter",
       "foreignKey": ""
     },
-    "creator": {
-      "type": "belongsTo",
-      "model": "Chatter",
-      "foreignKey": "creatorId"
+    "chat": {
+      "type": "hasOne",
+      "model": "Chat"
     }
   },
   "acls": [],

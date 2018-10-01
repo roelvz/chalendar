@@ -22,9 +22,9 @@
       "model": "Chatter",
       "foreignKey": "creatorId"
     },
-    "group": {
+    "chat": {
       "type": "belongsTo",
-      "model": "Group"
+      "model": "Chat"
     }
   },
   "acls": [],

@@ -20,11 +20,6 @@
   },
   "validations": [],
   "relations": {
-    "messages": {
-      "type": "hasMany",
-      "model": "Message",
-      "foreignKey": ""
-    },
     "members": {
       "type": "hasMany",
       "model": "Chatter",
