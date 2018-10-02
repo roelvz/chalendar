@@ -1,0 +1,29 @@
+{
+  "name": "ChatterInChat",
+  "plural": "ChatterInChats",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "newMessages": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "chat": {
+      "type": "belongsTo",
+      "model": "Chat",
+      "foreignKey": "chatId"
+    },
+    "chatter": {
+      "type": "belongsTo",
+      "model": "Chatter",
+      "foreignKey": "chatterId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

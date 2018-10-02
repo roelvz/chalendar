@@ -12,6 +12,15 @@
     "messages": {
       "type": "hasMany",
       "model": "Message"
+    },
+    "chatters": {
+      "type": "hasMany",
+      "model": "Chatter",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": false
+      },
+      "through": "ChatterInChat"
     }
   },
   "acls": [],
