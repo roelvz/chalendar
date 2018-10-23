@@ -20,9 +20,6 @@
     },
     "creationDate": {
       "type": "date"
-    },
-    "newMessages": {
-      "type": "number"
     }
   },
   "validations": [],
