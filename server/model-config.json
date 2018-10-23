@@ -62,5 +62,9 @@
   "ChatterInChat": {
     "dataSource": "db",
     "public": true
+  },
+  "Attendee": {
+    "dataSource": "db",
+    "public": true
   }
 }

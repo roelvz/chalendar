@@ -1,0 +1,37 @@
+{
+  "name": "Attendee",
+  "plural": "Attendees",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "attendance": {
+      "type": "string"
+    },
+    "chatterId": {
+      "type": "string",
+      "id": true
+    },
+    "eventId": {
+      "type": "string",
+      "id": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "chat": {
+      "type": "belongsTo",
+      "model": "Event",
+      "foreignKey": "eventId"
+    },
+    "chatter": {
+      "type": "belongsTo",
+      "model": "Chatter",
+      "foreignKey": "chatterId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

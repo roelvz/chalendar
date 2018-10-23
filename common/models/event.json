@@ -35,6 +35,13 @@
     "chat": {
       "type": "hasOne",
       "model": "Chat"
+    },
+    "attendees": {
+      "type": "hasMany",
+      "model": "Attendee",
+      "options": {
+        "nestRemoting": false
+      }
     }
   },
   "acls": [],
