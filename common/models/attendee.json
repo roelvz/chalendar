@@ -10,11 +10,7 @@
     "attendance": {
       "type": "string"
     },
-    "chatterId": {
-      "type": "string",
-      "id": true
-    },
-    "eventId": {
+    "id": {
       "type": "string",
       "id": true
     }
