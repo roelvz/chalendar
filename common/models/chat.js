@@ -14,35 +14,6 @@ module.exports = function(Chat) {
     next();
   });
 
-  // Set number of new messages to 0 when reading a chat's messages
-  Chat.afterRemote('**', function(context, user, next) {
-    if (context.methodString === 'Chat.prototype.__get__messages') {
-      let chatterInChat = Chat.app.models.ChatterInChat;
-      let creatorId = 'DEV_USER';
-      if (context.req && context.req.user && context.req.user.sub) {
-        creatorId = context.req.user.sub;
-      }
-
-      let chatId = context.instance.id;
-
-      chatterInChat.findOne({where: {
-        chatId: chatId,
-        chatterId: creatorId,
-      }})
-        .then(result => {
-          if (result) {
-            chatterInChat.upsert({
-              id: result.id,
-              chatId: chatId,
-              chatterId: creatorId,
-              newMessages: 0,
-            });
-          }
-        });
-    }
-    next();
-  });
-
   // Increase number of new messages when adding a message
   Chat.afterRemote('**', function(context, user, next) {
     if (context.methodString === 'Chat.prototype.__create__messages') {
