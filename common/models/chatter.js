@@ -13,21 +13,14 @@ module.exports = function(Chatter) {
       for (let i = 0; i < context.result.length; i++) {
         let group = context.result[i];
 
-        promises.push(chatModel.findOne({where: {
-          groupId: group.id,
-        }})
-          .then(chat => {
-            return chatterInChatModel.findOne({
-              where: {
-                chatId: chat.id,
-                chatterId: chatterId,
-              },
-            });
-          })
-          .then(chatterInChat => {
-            group.newMessages =
-              chatterInChat ? chatterInChat.newMessages : 0;
-          }));
+        chatterInChatModel.findOne({
+          where: {
+            chatId: group.chat.id,
+            chatterId: chatterId,
+          },
+        }).then(chatterInChat => {
+          group.newMessages = chatterInChat ? chatterInChat.newMessages : 0;
+        });
       }
       Promise.all(promises)
         .then(result => next())
