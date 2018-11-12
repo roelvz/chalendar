@@ -10,7 +10,7 @@ module.exports = function(Chatter) {
       let chatterId = context.instance.id;
 
       console.log('CONTEXT');
-      console.log(context);
+      console.log(context.result);
 
       for (let i = 0; i < context.result.length; i++) {
         let group = context.result[i];
