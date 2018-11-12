@@ -16,6 +16,9 @@ module.exports = function(Chatter) {
         let group = context.result[i];
         let chat = group.chat();
 
+        console.log('CHAT');
+        console.log(chat);
+
         promises.push(chatterInChatModel.findOne({
           where: {
             chatId: chat.id,
