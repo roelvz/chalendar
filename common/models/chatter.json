@@ -50,6 +50,10 @@
       "options": {
         "nestRemoting": false
       }
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "Like"
     }
   },
   "acls": [],

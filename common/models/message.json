@@ -25,6 +25,10 @@
     "chat": {
       "type": "belongsTo",
       "model": "Chat"
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "Like"
     }
   },
   "acls": [],

@@ -1,5 +1,4 @@
 'use strict';
 
-module.exports = function(Chatterinevent) {
-
+module.exports = function(Attendee) {
 };

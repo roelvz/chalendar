@@ -66,5 +66,9 @@
   "Attendee": {
     "dataSource": "db",
     "public": true
+  },
+  "Like": {
+    "dataSource": "db",
+    "public": true
   }
 }

@@ -1,6 +1,6 @@
 {
-  "name": "Attendee",
-  "plural": "Attendees",
+  "name": "Like",
+  "plural": "Likes",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -11,21 +11,19 @@
       "type": "string",
       "id": true
     },
-    "attendance": {
-      "type": "string"
+    "date": {
+      "type": "date"
     }
   },
   "validations": [],
   "relations": {
-    "chat": {
+    "message": {
       "type": "belongsTo",
-      "model": "Event",
-      "foreignKey": "eventId"
+      "model": "Message"
     },
     "chatter": {
       "type": "belongsTo",
-      "model": "Chatter",
-      "foreignKey": "chatterId"
+      "model": "Chatter"
     }
   },
   "acls": [],
