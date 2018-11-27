@@ -9,15 +9,9 @@ module.exports = function(Chatter) {
       // Calculate # new messages for group
       let chatterId = context.instance.id;
 
-      console.log('CONTEXT');
-      console.log(context.instance);
-
       for (let i = 0; i < context.result.length; i++) {
         let group = context.result[i];
         let chat = group.chat();
-
-        console.log('CHAT');
-        console.log(chat);
 
         promises.push(chatterInChatModel.findOne({
           where: {
