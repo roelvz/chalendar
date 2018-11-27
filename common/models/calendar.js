@@ -12,6 +12,19 @@ module.exports = function(Calendar) {
     next();
   });
 
+  // Set creationDate and creatorId for a new event.
+  Calendar.beforeRemote('**', function(context, user, next) {
+    if (context.methodString === 'Calendar.prototype.__create__events') {
+      let creatorId = 'DEV_USER';
+      if (context.req && context.req.user && context.req.user.sub) {
+        creatorId = context.req.user.sub;
+      }
+      context.args.data.creatorId = creatorId;
+      context.args.data.creationDate = Date.now();
+    }
+    next();
+  });
+
   // Calculate # of new messages for event
   Calendar.afterRemote('**', function(context, user, next) {
     if (context.methodString === 'Calendar.prototype.__get__events') {
